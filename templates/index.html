@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александра Пестова</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/media.css">
+    <script src="../static/js/phoneMask.js"></script>
+    <script src="../static/js/ajaxSubmit.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="wrapper">
+        <img id="my-photo" src="../static/img/my-photo.png">
+
+        <div class="info">
+            <h1 class="info-header">Alexandra Pestova</h1>
+            <h2 class="info-subheader">UX/UI designer</h2>
+
+            <h3 class="info-subtitle" id="first">/Обо мне</h3>
+            <p class="info-text">
+                Привет! Меня зовут Александра. Я UX/UI-дизайнер, также
+                занимаюсь разработкой логотипов. <br>
+                Имею опыт в мобильной фото- и видеосъемке. <br>
+                Стремлюсь к профессиональному росту и стараюсь постоянно
+                прокачивать свои навыки. <br>
+                Люблю работать с ощущением и восприятием! <br>
+                Моя работа - упор на качество и индивидуальный подход.
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="info">
+            <div class="info-container">
+                <h3 class="info-subtitle">/Мои навыки</h3>
+
+                <p class="progress-title">Figma</p>
+                <div class="progress-bar">
+                    <div class="skill figma"></div>
+                </div>
+
+                <p class="progress-title">Photoshop</p>
+                <div class="progress-bar">
+                    <div class="skill photoshop"></div>
+                </div>
+
+                <p class="progress-title">HTML</p>
+                <div class="progress-bar">
+                    <div class="skill html"></div>
+                </div>
+
+                <p class="progress-title">Tilda</p>
+                <div class="progress-bar">
+                    <div class="skill tilda"></div>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <h3 class="info-subtitle">/Мои контакты</h3>
+
+                <div class="contact">
+                    <p>Telegram</p>
+                    <a href="https://t.me/AsyaShteynbakh">https://t.me/AsyaShteynbakh</a>
+                </div>
+
+                <div class="contact">
+                    <p>Instagram</p>
+                    <a href="https://instagram.com/snn.pestova">snn.pestova</a>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <form id="application-form" method="POST" action="/number/">
+                    <label for="phone" id="phone-label">
+                        <input type="tel" id="phone-input" name="phone"
+                               placeholder="+7 (999) 999-99-99"
+                               pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}"
+                               required>
+                        <!--получение сообщений  из флеша-->
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <!--вывод сообщений из флеша-->
+                                    <p class="label-text"> {{ message }} </p>
+                                {% endfor %}
+                            {% else %}
+                                <!-- Иначе текст по умолчанию-->
+                                <p class="label-text">Введите номер
+                                    телефона</p>
+                            {% endif %}
+                        {% endwith %}
+                    </label>
+                    <input id="application-submit" type="submit"
+                           value="Оставить заявку">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="info">
+            <div class="info-container">
+                <h3 class="info-subtitle">/Мои персональные качества</h3>
+                <div class="soft-skills">
+                    <span>Соблюдение дедлайнов</span>
+                    <span>Грамотность</span>
+                    <span>Самоконтроль</span>
+                    <span>Ответственность</span>
+                    <span>Креативность</span>
+                    <span>Структурность</span>
+                    <span>Умение видеть детали</span>
+                    <span>Широкий кругозор</span>
+                    <span>Идейность</span>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <h3 class="info-subtitle">/Моя уникальность</h3>
+                <p class="info-text" id="uniq">
+                    Я разрабатываю визуальный продукт, который не просто
+                    привлекает внимание клиента своей красотой,
+                    но также внедряет в него смыслы и логику, которые вызывают
+                    желание снова и снова
+                    взаимодействовать с продуктом. <br>
+                    Моя цель - не просто создать привлекательное изображение,
+                    но и передать через визуальное
+                    восприятие информацию и эмоции, которые мотивируют клиента
+                    к покупке и поддерживают интерес к
+                    продукту на долгосрочной основе.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

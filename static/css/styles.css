@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    padding: 120px 200px 0px 200px;
+    background-color: #FFFFF6;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.wrapper:not(:last-child) {
+    margin-bottom: 110px;
+}
+
+.info-container {
+    margin-bottom: 40px;
+}
+
+#my-photo {
+    width: 420px;
+    height: 480px;
+}
+
+.info-header {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 65px;
+}
+
+.info-subheader {
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.info-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+
+    text-transform: uppercase;
+    text-align: left;
+    color: #78881C;
+
+    margin-bottom: 30px;
+}
+
+.info-subtitle#first {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.info-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+
+    width: 525px;
+}
+
+.progress-title {
+    text-align: left;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.progress-bar {
+    width: 420px;
+    height: 22px;
+    margin-bottom: 10px;
+    border: 2px solid #78881C;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.skill {
+    height: 90%;
+    margin: 1px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #78881C;
+}
+
+.skill.figma {
+    width: 362px;
+
+    animation-duration: 3s;
+    animation-name: figmaLoading;
+}
+
+@keyframes figmaLoading {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 362px;
+    }
+}
+
+.skill.photoshop {
+    width: 318px;
+
+    animation-duration: 3s;
+    animation-name: photoshopLoading;
+}
+
+@keyframes photoshopLoading {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 318px;
+    }
+}
+
+.skill.html {
+    width: 204px;
+
+    animation-duration: 3s;
+    animation-name: htmlLoading;
+}
+
+@keyframes htmlLoading {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 204px;
+    }
+}
+
+.skill.tilda {
+    width: 110px;
+
+    animation-duration: 3s;
+    animation-name: tildaLoading;
+}
+
+@keyframes tildaLoading {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 110px;
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact * {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.contact a {
+    display: block;
+    width: 260px;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+}
+
+.contact:last-child {
+    margin-top: 10px;
+}
+
+#application-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#phone-label * {
+    display: block;
+}
+
+.label-text {
+    text-align: center;
+}
+
+#phone-input {
+    box-sizing: border-box;
+
+    width: 220px;
+    height: 46px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: left;
+
+    border: 2px solid #78881C;
+    border-radius: 15px;
+
+    padding: 10px 15px;
+    background-color: #FFFFF6;
+}
+
+#application-submit {
+    width: 176px;
+    height: 46px;
+    border-radius: 15px;
+    border: 2px solid #78881C;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+
+    color: #FFFFFF;
+    background-color: #78881C;
+
+    padding: 2px;
+}
+
+#application-submit:hover {
+    color: #78881C;
+    background-color: #FFFFFF;
+}
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    width: 620px;
+}
+
+.soft-skills span {
+    height: 32px;
+    padding: 0px 12px 0px 12px;
+    border: 2px solid #78881C;
+    border-radius: 15px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.info-text#uniq {
+    width: 620px;
+}
